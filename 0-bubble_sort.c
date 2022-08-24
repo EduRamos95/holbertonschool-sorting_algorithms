@@ -5,10 +5,10 @@
  * @array: element of array to swap
  * @array2: element of array to swap
  */
-void swap (int *array, int *array2)
+void swap(int *array, int *array2)
 {
 	int tmp;
-	
+
 	tmp = *array;
 	*array = *array2;
 	*array2 = tmp;
@@ -30,13 +30,13 @@ void bubble_sort(int *array, size_t size)
 	n = size;
 	for (i = 0; i < (n - 1); i++)
 	{
-		for (j = 0; j < (n -1); j++)
+		for (j = 0; j < (n - 1); j++)
 		{
 			if (array[j] < array[j + 1])
 				continue;
 			else
 			{
-				swap(&array[j],&array[j + 1]);
+				swap(&array[j], &array[j + 1]);
 				/*tmp = array[j];*/
 				/*array[j] = array[j + 1];*/
 				/*array[j + 1] = tmp;*/
