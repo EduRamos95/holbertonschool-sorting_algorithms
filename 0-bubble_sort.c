@@ -36,6 +36,8 @@ void bubble_sort(int *array, size_t size)
 				continue;
 			else
 			{
+				if (array[j] == array[j + 1])
+					break;
 				swap(&array[j], &array[j + 1]);
 				/*tmp = array[j];*/
 				/*array[j] = array[j + 1];*/
