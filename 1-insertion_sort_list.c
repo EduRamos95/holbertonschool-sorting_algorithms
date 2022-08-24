@@ -28,7 +28,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *tmp = NULL, *tmp2 = NULL;
 
 	/* check if the argument passed and address of list exist */
-	if (!list && !(*list))
+	if (list == NULL)
 		return;
 
 	/* iterate in the list only if it exists */
