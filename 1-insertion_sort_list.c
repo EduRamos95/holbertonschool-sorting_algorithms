@@ -34,12 +34,18 @@ void insertion_sort_list(listint_t **list)
 	/* iterate in the list only if it exists */
 	for (tmp = *list; tmp; tmp = tmp->next)
 	{
-		/*  */
 		tmp2 = tmp;
+
+		/* swap while there are a high and and low elements */
 		while (tmp2->prev && (tmp2->n < tmp2->prev->n))
 		{
 			swap_dll(tmp2->prev, tmp2);
 
+			/**
+			 * if there is not more swapable elements and if the node
+			 * is the new head of the list.
+			 * set the partial list to **list
+			 */
 			if (!tmp2->prev)
 				*list = tmp2;
 
